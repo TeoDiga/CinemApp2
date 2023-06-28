@@ -1,5 +1,6 @@
 package it.unimib.cinemapp.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,7 +25,7 @@ public class HomeFragment extends Fragment {
 
     private boolean lock;
     public HomeFragment() {    }
-    public static HomeFragment newInstance(String param1, String param2) {
+    public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
         return fragment;
     }
@@ -56,6 +57,7 @@ public class HomeFragment extends Fragment {
             if(ricerca.equals("")){
                 return;
             }
+            //transizione da un fragment all'altro
 
         });
     }
