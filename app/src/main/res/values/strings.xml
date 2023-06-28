@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CinemApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_ricerca">Inserisci il titolo di un film che ti interessa</string>
+    <string name="vuota" />
+</resources>
