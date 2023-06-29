@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 import it.unimib.cinemapp.R;
@@ -57,7 +58,7 @@ public class HomeFragment extends Fragment {
             if(ricerca.equals("")){
                 return;
             }
-            //transizione da un fragment all'altro
+            Snackbar.make(view, ricerca, Snackbar.LENGTH_SHORT).show();
 
         });
     }
