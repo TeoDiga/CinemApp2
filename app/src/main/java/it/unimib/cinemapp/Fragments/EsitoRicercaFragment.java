@@ -16,12 +16,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import it.unimib.cinemapp.Model.Film;
+import it.unimib.cinemapp.Model.FilmApiResponse;
 import it.unimib.cinemapp.R;
+import it.unimib.cinemapp.Util.APICalls;
 import it.unimib.cinemapp.Util.FilmMultipliRecyclerViewAdapter;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class EsitoRicercaFragment extends Fragment {
@@ -67,12 +74,23 @@ public class EsitoRicercaFragment extends Fragment {
                 new FilmMultipliRecyclerViewAdapter.OnItemClickListener() {
                     @Override
                     public void onFilmClick(Film film) {
-                        getParentFragmentManager().beginTransaction().replace(
-                                        R.id.fragmentContainerView,
-                                        new FilmSingoloFragment(film),
-                                        "mostra_film_fragment")
-                                .addToBackStack("mostra_film_fragment_tag")
-                                .commit();
+                        APICalls.findFilmById(film.getID()).enqueue(new Callback<FilmApiResponse>() {
+                            @Override
+                            public void onResponse(Call<FilmApiResponse> call, Response<FilmApiResponse> response) {
+                                getParentFragmentManager().beginTransaction().replace(
+                                                R.id.fragmentContainerView,
+                                                new FilmSingoloFragment(film.espandi(response.body())),
+                                                "mostra_film_fragment")
+                                        .addToBackStack("mostra_film_fragment_tag")
+                                        .commit();
+                            }
+
+                            @Override
+                            public void onFailure(Call<FilmApiResponse> call, Throwable t) {
+                                Snackbar.make(view, "errore", Snackbar.LENGTH_SHORT).show();
+                            }
+                        });
+
                     }
                 });
         recyclerView.setLayoutManager(layoutManager);

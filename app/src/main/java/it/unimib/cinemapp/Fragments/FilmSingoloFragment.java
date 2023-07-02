@@ -18,6 +18,7 @@ import it.unimib.cinemapp.R;
 
 public class FilmSingoloFragment extends Fragment {
     private Film film;
+
     public FilmSingoloFragment(Film film){
         this.film=film;
     }
@@ -37,11 +38,11 @@ public class FilmSingoloFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        /*
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar2);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        */
+
 
     }
 }
