@@ -6,11 +6,14 @@ public class Film {
     private String titolo;
     private String descrizione;
 
+    private String URLimmagine;
+
     //costruttori
     public Film(Result result){
         this.ID= result.getId();
         this.titolo=result.getTitle();
         this.descrizione= result.getDescription();
+        this.URLimmagine=result.getImage();
     }
     //getter e setter
 
@@ -32,6 +35,14 @@ public class Film {
 
     public String getDescrizione() {
         return descrizione;
+    }
+
+    public String getURLimmagine() {
+        return URLimmagine;
+    }
+
+    public void setURLimmagine(String URLimmagine) {
+        this.URLimmagine = URLimmagine;
     }
 
     public void setDescrizione(String descrizione) {

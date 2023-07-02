@@ -1,5 +1,7 @@
 package it.unimib.cinemapp.Util;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.net.URL;
 import java.util.List;
 
 import it.unimib.cinemapp.Model.Film;
@@ -46,6 +49,8 @@ public class FilmMultipliRecyclerViewAdapter extends RecyclerView.Adapter<FilmMu
         else {return 0;}
     }
 
+
+
     public class FilmViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private final TextView textViewTitolo;
         private final TextView textViewDescrizione;
@@ -57,17 +62,36 @@ public class FilmMultipliRecyclerViewAdapter extends RecyclerView.Adapter<FilmMu
             textViewDescrizione=itemView.findViewById(R.id.textViewDescrizione);
             imageView=itemView.findViewById(R.id.poster);
             itemView.setOnClickListener(this);
+
         }
         public void bind(Film film){
             textViewTitolo.setText(film.getTitolo());
             textViewDescrizione.setText(film.getDescrizione());
-
+            //setupImmagine(film);
             //immagine placeholder
         }
 
         @Override
         public void onClick(View v) {
             onItemClickListener.onFilmClick(filmList.get(getAdapterPosition()));
+        }
+        void setupImmagine(Film film) {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        URL url = null;
+                        url = new URL(film.getURLimmagine());
+                        Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                        imageView.setImageBitmap(image);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            thread.start();
         }
     }
 

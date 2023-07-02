@@ -3,6 +3,12 @@ package it.unimib.cinemapp.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+
+
 public class Result {
     @SerializedName("id")
     @Expose
@@ -24,39 +30,44 @@ public class Result {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getResultType() {
         return resultType;
-    }
-
-    public void setResultType(String resultType) {
-        this.resultType = resultType;
     }
 
     public String getImage() {
         return image;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getDescription() {
         return description;
     }
+    public class RicercaApiResponse {
+        @SerializedName("searchType")
+        @Expose
+        private String searchType;
+        @SerializedName("expression")
+        @Expose
+        private String expression;
+        @SerializedName("results")
+        @Expose
+        private List<Result> results;
+        @SerializedName("errorMessage")
+        @Expose
+        private String errorMessage;
 
-    public void setDescription(String description) {
-        this.description = description;
+        public List<Film> conversione(){
+            List<Film> lista= new ArrayList<>();
+            Iterator<Result> iterator= results.iterator();
+            while (iterator.hasNext()){
+                Result filmCercato=iterator.next();
+                Film film= new Film(filmCercato);
+                lista.add(film);
+            }
+            return lista;
+        }
     }
 }
