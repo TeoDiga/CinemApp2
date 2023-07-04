@@ -23,12 +23,15 @@ public class Film {
 
     private String URLimmagine;
 
+    private boolean preferito;
+
     //costruttori
     public Film(Result result){
         this.ID= result.getId();
         this.titolo=result.getTitle();
         this.descrizione= result.getDescription();
         this.URLimmagine=result.getImage();
+        this.preferito=false;
     }
     public Film espandi(FilmApiResponse fonte){
         this.anno=fonte.getYear();
@@ -195,6 +198,14 @@ public class Film {
 
     public void setIncassi(String incassi) {
         this.incassi = incassi;
+    }
+
+    public boolean isPreferito() {
+        return preferito;
+    }
+
+    public void setPreferito(boolean preferito) {
+        this.preferito = preferito;
     }
     //parcelable
 }

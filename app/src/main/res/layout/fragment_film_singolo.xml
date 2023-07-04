@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
 
                 android:text="Button"
-                app:icon="@drawable/baseline_favorite_24" />
+                app:icon="@drawable/baseline_favorite_border_24" />
         </LinearLayout>
     </LinearLayout>
 
