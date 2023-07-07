@@ -19,15 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        if (getSupportFragmentManager().findFragmentByTag("mostra_film_fragment") != null) {
+            //Sono naaella ricerca
+            getSupportFragmentManager().popBackStack("mostra_film_fragment_tag",
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        } else
         if (getSupportFragmentManager().findFragmentByTag("ricerca_fragment") != null) {
             //Sono nella ricerca
             getSupportFragmentManager().popBackStack("ricerca_fragment_tag",
                     FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        } else if (getSupportFragmentManager().findFragmentByTag("mostra_film_fragment") != null) {
-            //Sono nella ricerca
-            getSupportFragmentManager().popBackStack("mostra_fragment_tag",
-                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        } {
+        } else {
             super.onBackPressed();
         }
     }

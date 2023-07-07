@@ -4,6 +4,15 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class FilmApiResponse {
+    @SerializedName("title")
+    @Expose
+    private String title;
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("image")
+    @Expose
+    private String image;
     @SerializedName("year")
     @Expose
     private String year;
@@ -46,6 +55,18 @@ public class FilmApiResponse {
     @SerializedName("errorMessage")
     @Expose
     private String errorMessage;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getImage() {
+        return image;
+    }
 
     public String getYear() {
         return year;

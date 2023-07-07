@@ -5,4 +5,7 @@
     <string name="hint_ricerca">Inserisci il titolo di un film che ti interessa</string>
     <string name="vuota" />
     <string name="caricamento">caricamento</string>
+    <string name="chiave_preferiti">preferiti</string>
+    <string name="di">di:</string>
+    <string name="con">Con:</string>
 </resources>

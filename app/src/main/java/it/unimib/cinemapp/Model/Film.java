@@ -54,6 +54,14 @@ public class Film {
         this.genere=fonte.getGenres();
         return this;
     }
+    public Film(FilmApiResponse fonte){
+        this.ID=fonte.getId();
+        this.titolo=fonte.getTitle();
+        this.URLimmagine=fonte.getImage();
+        this.descrizione=fonte.getPlot();
+        this.preferito=false;
+        this.espandi(fonte);
+    }
     //getter e setter
 
     public String getID() {

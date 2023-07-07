@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primario_azzurro">#4ef6fd</color>
     <color name="primario_giallo">#f6cf27</color>
+    <color name="primario_scuro">#288D91</color>
 </resources>

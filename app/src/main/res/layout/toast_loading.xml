@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toast_lin_layout"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:layout_width="150dp"
+    android:orientation="horizontal"
+    android:layout_height="150dp"
+    android:background="#ffffff">
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="invisible"/>
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.ChasingDots"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/primario_scuro"
+        />
 
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="invisible"/>
 </LinearLayout>

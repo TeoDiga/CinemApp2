@@ -68,6 +68,9 @@ public class FilmMultipliRecyclerViewAdapter extends RecyclerView.Adapter<FilmMu
             textViewTitolo.setText(film.getTitolo());
             textViewDescrizione.setText(film.getDescrizione());
             //setupImmagine(film);
+            if (film.getURLimmagine() != null) {
+                new DownloadImageTask(imageView).execute(film.getURLimmagine());
+            }
             //immagine placeholder
         }
 
