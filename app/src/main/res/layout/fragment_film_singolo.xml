@@ -30,23 +30,21 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
             >
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/Locandina"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
-                    tools:src="@tools:sample/avatars"
-                    android:scaleType="centerCrop"
                     android:layout_margin="16dp"
-                    />
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/avatars" />
 
                 <TextView
                     android:id="@+id/Titolo"
@@ -58,12 +56,20 @@
                     android:textAlignment="center"
                     android:textSize="30sp" />
 
+
+                <TextView
+                    android:id="@+id/textViewGenere"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="TextView" />
+
                 <TextView
                     android:id="@+id/Trama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:layout_margin="16dp"/>
+                    android:layout_margin="16dp"
+                    android:text="TextView" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -89,8 +95,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textViewCon"
@@ -107,6 +113,213 @@
                         android:text="TextView" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewScrittoDa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Scritto" />
+
+                    <TextView
+                        android:id="@+id/textViewSceneggiatore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewDurata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/durata" />
+
+                    <TextView
+                        android:id="@+id/textViewLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewProdotto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/prodotto" />
+
+                    <TextView
+                        android:id="@+id/textViewCompagnia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/in" />
+
+                    <TextView
+                        android:id="@+id/textViewPaese"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewNel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/nel" />
+
+                    <TextView
+                        android:id="@+id/textViewAnno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewCosto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/budget" />
+
+                    <TextView
+                        android:id="@+id/textViewBudget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewGuagno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/incasso" />
+
+                    <TextView
+                        android:id="@+id/textViewIncassi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewVittoria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/premi" />
+
+                    <TextView
+                        android:id="@+id/textViewPremi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewRecensioni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/critica" />
+
+                    <TextView
+                        android:id="@+id/textViewCrtitica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewVoti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/voto" />
+
+                    <TextView
+                        android:id="@+id/textViewUtenti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
                 <com.like.LikeButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,14 +328,10 @@
                     android:id="@+id/likeButton"
                     android:layout_gravity="end"
                     />
-
-
             </LinearLayout>
         </ScrollView>
-    </LinearLayout>
 
-
-    <!--
+            </LinearLayout>    <!--
 
     -->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -9,4 +9,14 @@
     <string name="di">di:</string>
     <string name="con">Con:</string>
     <string name="preferenze">Lista dei preferiti</string>
+    <string name="Scritto">Scritto da:</string>
+    <string name="durata">Durata:</string>
+    <string name="prodotto">prodotto da:</string>
+    <string name="in">In:</string>
+    <string name="nel">Nel:</string>
+    <string name="budget">Budget:</string>
+    <string name="incasso">ha incassato:</string>
+    <string name="premi">Ha vinto:</string>
+    <string name="critica">Voto medio della critica:</string>
+    <string name="voto">Media dei voti degli utenti:</string>
 </resources>

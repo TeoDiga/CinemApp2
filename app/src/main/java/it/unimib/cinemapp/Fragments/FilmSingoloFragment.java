@@ -32,6 +32,18 @@ public class FilmSingoloFragment extends Fragment {
     private TextView textViewtrama;
     private TextView textViewRegista;
     private TextView textViewCast;
+    private TextView textViewGenere;
+    private TextView textViewDurata;
+    private TextView textViewSceneggiatore;
+    private TextView textViewAnno;
+    private TextView textViewPaese;
+    private TextView textViewCompagnia;
+    private TextView textViewBudget;
+    private TextView textViewBoxOffice;
+    private TextView textViewPremi;
+    private TextView textViewCritica;
+    private TextView textViewUtenti;
+
     private ImageView imageViewLocandina;
     private Context context;
 
@@ -73,12 +85,35 @@ public class FilmSingoloFragment extends Fragment {
         textViewtrama=view.findViewById(R.id.Trama);
         textViewRegista=view.findViewById(R.id.textViewRegista);
         textViewCast=view.findViewById(R.id.textViewCast);
+        textViewDurata=view.findViewById(R.id.textViewLength);
+        textViewGenere=view.findViewById(R.id.textViewGenere);
+        textViewSceneggiatore=view.findViewById(R.id.textViewSceneggiatore);
+        textViewAnno=view.findViewById(R.id.textViewAnno);
+        textViewPaese=view.findViewById(R.id.textViewPaese);
+        textViewCompagnia=view.findViewById(R.id.textViewCompagnia);
+        textViewBudget=view.findViewById(R.id.textViewBudget);
+        textViewBoxOffice=view.findViewById(R.id.textViewIncassi);
+        textViewPremi=view.findViewById(R.id.textViewPremi);
+        textViewCritica=view.findViewById(R.id.textViewCrtitica);
+        textViewUtenti=view.findViewById(R.id.textViewUtenti);
+
         imageViewLocandina = view.findViewById(R.id.Locandina);
 
         textViewtitolo.setText(film.getTitolo());
         textViewtrama.setText(film.getTrama());
         textViewRegista.setText(film.getRegista());
         textViewCast.setText(film.getCast());
+        textViewSceneggiatore.setText(film.getSceneggiatore());
+        textViewGenere.setText(film.getGenere());
+        textViewDurata.setText(film.getDurata());
+        textViewCompagnia.setText(film.getCompagnia());
+        textViewPaese.setText(film.getPaese());
+        textViewAnno.setText(film.getAnno());
+        textViewUtenti.setText(film.getVotoUtenti());
+        textViewBudget.setText(film.getBudget());
+        textViewCritica.setText(film.getVotoProfessionisti());
+        textViewPremi.setText(film.getPremi());
+        textViewBoxOffice.setText(film.getIncassi());
 
         new DownloadImageTask(imageViewLocandina).execute(film.getURLimmagine());
 
