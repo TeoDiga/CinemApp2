@@ -96,5 +96,13 @@ public class HomeFragment extends Fragment {
             //Snackbar.make(view, ricerca, Snackbar.LENGTH_SHORT).show();
 
         });
+        final Button bottonePref= view.findViewById(R.id.buttonePref);
+        bottonePref.setOnClickListener(v ->
+                getParentFragmentManager().beginTransaction().replace(
+                        R.id.fragmentContainerView,
+                        new PreferitiFragment(),
+                        "preferiti_fragment")
+                .addToBackStack("preferiti_fragment_tag")
+                .commit());
     }
 }

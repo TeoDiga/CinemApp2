@@ -59,7 +59,7 @@ public class GestorePreferiti {
     public static ArrayList<String> leggiElenco(Context context){
         String key= context.getString(R.string.chiave_preferiti);
         SharedPreferences sharedPreferences=context.getSharedPreferences(key, Context.MODE_PRIVATE);
-        Set<String> elenco =sharedPreferences.getStringSet(key, null);
+        Set<String> elenco =sharedPreferences.getStringSet(key, new HashSet<String>());
         ArrayList<String> esito= new ArrayList<>();
         esito.addAll(elenco);
         return esito;

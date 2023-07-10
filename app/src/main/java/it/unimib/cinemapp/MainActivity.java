@@ -28,7 +28,11 @@ public class MainActivity extends AppCompatActivity {
             //Sono nella ricerca
             getSupportFragmentManager().popBackStack("ricerca_fragment_tag",
                     FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        } else {
+        } else if (getSupportFragmentManager().findFragmentByTag("preferiti_fragment") != null) {
+            //Sono nella ricerca
+            getSupportFragmentManager().popBackStack("preferiti_fragment_tag",
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);}
+            else{
             super.onBackPressed();
         }
     }

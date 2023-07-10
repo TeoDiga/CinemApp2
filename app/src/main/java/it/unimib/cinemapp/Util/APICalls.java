@@ -20,4 +20,5 @@ public class APICalls {
         FilmRestService service= retrofit.create(FilmRestService.class);
         return service.filmSingolo(ID);
     }
+
 }
